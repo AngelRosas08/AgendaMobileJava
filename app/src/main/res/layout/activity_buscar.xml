@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".Buscar">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BUSCAR ALUMNO"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="italic"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:text=" Id. Alumno"/>
+                <EditText
+                    android:id="@+id/txtId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:inputType="number"
+                    android:hint="Id Alumno"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="buscarAlumno"
+                    android:text="Buscar"/>
+
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/ic_alumno">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtNombreBuscar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:startIconDrawable="@drawable/ic_telefono">>
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtTelefonoBuscar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Telefono" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:startIconDrawable="@drawable/ic_correo">>
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtCorreoBuscar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Correo" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            app:startIconDrawable="@drawable/ic_baseline_location_on_24">>
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtDomicilioBuscar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Domicilio"
+                                android:layout_marginBottom="20dp"/>
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:onClick="actualizarAlumno"
+                                android:text="Actualizar" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:onClick="borrarAlumno"
+                                android:text="Eliminar" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:onClick="cancelarBuscar"
+                                android:text="Cancelar" />
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:onClick="regresarBuscar"
+                                android:text="Regresar"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
